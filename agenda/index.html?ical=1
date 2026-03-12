@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Salve Seus Dados - ECPv5.5.0.1//NONSGML v1.0//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Salve Seus Dados
+X-ORIGINAL-URL:https://salveseusdados.com.br
+X-WR-CALDESC:Eventos para Salve Seus Dados
+END:VCALENDAR

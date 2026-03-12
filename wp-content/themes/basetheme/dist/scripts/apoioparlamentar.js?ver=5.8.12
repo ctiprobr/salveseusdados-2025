@@ -1,0 +1,178 @@
+/**
+ * scripts.js
+ */
+ (function($) {
+    $(document).ready(function() {
+      
+        $('.filtros').on('change', function(){
+            $('.parlamentar').hide();
+            $('#buscar').val('');
+
+            var filtros = "";
+            // $('.filtros').each( function(){
+            //     if(  $(this).is(':checked') ) { 
+            //         filtros += ` .${$(this).val()},`;
+            //     }  
+            //     if( $('option:selected',this).val() ) { 
+            //         filtros += ` .${$(this).val()},`;  
+            //     }  
+            // });
+
+            if( $('.checkPrivaticao').is(':checked')  ){
+                var countPrivaticao = $('.checkPrivaticao:checked').length;
+                var cp = 1;
+
+                $('.checkPrivaticao:checked').each( function(){
+                    filtroPrivaticao = "." + $(this).val();
+                
+                    if( $('.checkCargo').is(':checked') ){
+                        var countCargo = $('.checkCargo:checked').length;
+                        var cc = 1;
+
+                        $('.checkCargo:checked').each( function(){
+                            filtroCargo = "." + $(this).val();  
+                            
+                            if( $('#uf option:selected').val() ) { 
+                                filtroUf = "."+$('#uf option:selected').val();
+                            }else{
+                                filtroUf = "";
+                            };
+        
+                            if( $('#partido option:selected').val() ) { 
+                                filtroPartido = "."+$('#partido option:selected').val();
+                            }else{
+                                filtroPartido = "";
+                            };
+                            
+                            filtros += filtroPrivaticao + filtroCargo + filtroUf + filtroPartido; 
+                            if( cc < countCargo  ){
+                                filtros += ",";  
+                            }
+                            cc++;
+                        });
+
+                    }else{
+                        filtroCargo = "";
+
+                        if( $('#uf option:selected').val() ) { 
+                            filtroUf = "."+$('#uf option:selected').val();
+                        }else{
+                            filtroUf = "";
+                        };
+    
+                        if( $('#partido option:selected').val() ) { 
+                            filtroPartido = "."+$('#partido option:selected').val();
+                        }else{
+                            filtroPartido = "";
+                        };
+                        filtros += filtroPrivaticao + filtroCargo + filtroUf + filtroPartido;   
+                    }
+                    if(  cp < countPrivaticao  ){
+                        filtros += ",";  
+                    }
+                    cp++;
+
+                });
+            }else if( $('.checkCargo').is(':checked') ){
+                var countCargo = $('.checkCargo:checked').length;
+                var cC = 1;
+
+                $('.checkCargo:checked').each( function(){
+                    filtroCargo = "." + $(this).val();  
+                    
+                    if( $('#uf option:selected').val() ) { 
+                        filtroUf = "."+$('#uf option:selected').val();
+                    }else{
+                        filtroUf = "";
+                    };
+
+                    if( $('#partido option:selected').val() ) { 
+                        filtroPartido = "."+$('#partido option:selected').val();
+                    }else{
+                        filtroPartido = "";
+                    };
+
+                    filtros += filtroCargo + filtroUf + filtroPartido;   
+                    if( cC < countCargo  ){
+                        filtros += ",";  
+                    }
+                    cC++;
+                });
+
+            }else if( $('#uf option:selected').val() ) { 
+                filtros += "."+$('#partido option:selected').val();
+                filtros += ",";  
+            }else if( $('#partido option:selected').val() ) { 
+                filtros += "."+$('#partido option:selected').val();
+                filtros += ",";  
+            };
+
+
+            console.log( filtros );
+            //Se não tiver nenhum selecionado
+            if( filtros ){
+                $('.parlamentar').filter( filtros ).show();
+            }else{
+                $('.parlamentar').show();
+            }
+        });
+        jQuery.expr[':'].icontains = function(a, i, m) {
+            return jQuery(a).text().toUpperCase()
+                .indexOf(m[3].toUpperCase()) >= 0;
+          };
+        $('#buscar').on('keyup', function() {
+            var nome = $(this).val();
+            $('.parlamentar').hide();
+            $('.nome:icontains("'+ nome +'")').closest( ".parlamentar" ).show();
+        });
+
+        $('.buttonModal, .parlamentar').on('click', function(){
+            var data = $(this).attr('data');
+            var foto = $('.parlamentar[data='+data+'] .foto img').attr('src');
+            var nome = $('.parlamentar[data='+data+'] .nome').text();
+            var cargo = $('.parlamentar[data='+data+'] .cargo').text();
+            var partido = $('.parlamentar[data='+data+'] .partido').text();
+            var status = $('.parlamentar[data='+data+'] .statusclass').text();
+            //var site = $('.parlamentar[data='+data+'] .site').text();
+            var email = $('.parlamentar[data='+data+'] .email').text();
+            var telefone = $('.parlamentar[data='+data+'] .telefone').text();
+            var facebook = $('.parlamentar[data='+data+'] .facebook').text();
+            var twitter = $('.parlamentar[data='+data+'] .twitter').text();
+            var instagram = $('.parlamentar[data='+data+'] .instagram').text();
+            var facelink = $('.parlamentar[data='+data+'] .facelink').text();
+            var twitterlink = $('.parlamentar[data='+data+'] .twitterlink').text();
+            var instalink = $('.parlamentar[data='+data+'] .instalink').text();
+            var statuscompleto = "";
+   
+            if( status == 'contra' ){
+                statuscompleto = "<span class='contra'><i class='fa fa-check'></i> Contra a Privatização</span>";
+            }else if( status == 'favorável'){
+                statuscompleto = "<span class='favoravel'><i class='fa fa-times'></i> Favorável a Privatização</span>";
+            }else{
+                statuscompleto = "<span class='indefinido'><i class='fa fa-minus'></i> Indefinido</span>";
+            }
+            
+            $('#modalParlamentar .fotomodal img').attr('src', foto);
+            $('#modalParlamentar .partido').text(partido);
+            $('#modalParlamentar .nome').text(nome);
+            $('#modalParlamentar .status').html(statuscompleto);
+            $('#modalParlamentar .cargo').text(cargo);
+            //$('#modalParlamentar .site a').attr('href', site);
+            //$('#modalParlamentar .site a').text(site);
+            $('#modalParlamentar .email a').attr('href', email);
+            $('#modalParlamentar .email a').text(email);
+            $('#modalParlamentar .telefone a').attr('href', telefone);
+            $('#modalParlamentar .telefone a').text(telefone);
+            $('#modalParlamentar .facebook a').attr('href', facelink);
+            $('#modalParlamentar .facebook a').text(facebook);
+            $('#modalParlamentar .twitter a').attr('href', twitterlink);
+            $('#modalParlamentar .twitter a').text(twitter);
+            $('#modalParlamentar .instagram a').attr('href', instalink);
+            $('#modalParlamentar .instagram a').text(instagram);
+            
+            $('#modalParlamentar').modal('show'); 
+        });
+       
+
+    });
+})(jQuery);

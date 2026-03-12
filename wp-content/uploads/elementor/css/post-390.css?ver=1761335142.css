@@ -1,0 +1,156 @@
+.elementor-390 .elementor-element.elementor-element-793e8347:not(.elementor-motion-effects-element-type-background), .elementor-390 .elementor-element.elementor-element-793e8347 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#FEED01;background-image:url("http://localhost:3000/salveseusdados/wp-content/uploads/2021/04/bg-depo.png");background-position:bottom right;background-repeat:no-repeat;background-size:35% auto;}.elementor-390 .elementor-element.elementor-element-793e8347{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;margin-top:-96px;margin-bottom:0px;padding:120px 0px 50px 0px;}.elementor-390 .elementor-element.elementor-element-793e8347 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-390 .elementor-element.elementor-element-711cda59 .elementor-heading-title{color:#000000;font-family:"IBM Plex Mono", Sans-serif;font-size:3em;font-weight:400;}.elementor-390 .elementor-element.elementor-element-711cda59 > .elementor-widget-container{padding:20px 20px 20px 20px;}.elementor-390 .elementor-element.elementor-element-5c26846b{padding:50px 0px 50px 0px;}.elementor-390 .elementor-element.elementor-element-96c22e1{--grid-side-margin:10px;--grid-column-gap:10px;--grid-row-gap:10px;--grid-bottom-margin:10px;}.elementor-390 .elementor-element.elementor-element-496ed52 .elementor-icon-list-icon i{color:#000000;font-size:14px;}.elementor-390 .elementor-element.elementor-element-496ed52 .elementor-icon-list-icon svg{fill:#000000;--e-icon-list-icon-size:14px;}.elementor-390 .elementor-element.elementor-element-496ed52 .elementor-icon-list-icon{width:14px;}.elementor-390 .elementor-element.elementor-element-794d040 .elementor-heading-title{color:#000000;font-family:"IBM Plex Mono", Sans-serif;font-size:23px;font-weight:600;}.elementor-390 .elementor-element.elementor-element-d22403d{color:#7E7E7E;font-family:"Roboto Slab", Sans-serif;font-weight:400;}.elementor-390 .elementor-element.elementor-element-7b318b4e .elementor-search-form__container{min-height:50px;}.elementor-390 .elementor-element.elementor-element-7b318b4e .elementor-search-form__submit{min-width:50px;}body:not(.rtl) .elementor-390 .elementor-element.elementor-element-7b318b4e .elementor-search-form__icon{padding-left:calc(50px / 3);}body.rtl .elementor-390 .elementor-element.elementor-element-7b318b4e .elementor-search-form__icon{padding-right:calc(50px / 3);}.elementor-390 .elementor-element.elementor-element-7b318b4e .elementor-search-form__input, .elementor-390 .elementor-element.elementor-element-7b318b4e.elementor-search-form--button-type-text .elementor-search-form__submit{padding-left:calc(50px / 3);padding-right:calc(50px / 3);}.elementor-390 .elementor-element.elementor-element-7b318b4e:not(.elementor-search-form--skin-full_screen) .elementor-search-form__container{background-color:#FAFAFA;border-color:#DEDEDE;border-width:1px 1px 1px 1px;border-radius:0px;}.elementor-390 .elementor-element.elementor-element-7b318b4e.elementor-search-form--skin-full_screen input[type="search"].elementor-search-form__input{background-color:#FAFAFA;border-color:#DEDEDE;border-width:1px 1px 1px 1px;border-radius:0px;}.elementor-390 .elementor-element.elementor-element-4a72668f > .elementor-widget-container{padding:10px 10px 10px 10px;border-style:solid;border-width:1px 1px 1px 1px;border-color:#E5E5E5;}.elementor-390 .elementor-element.elementor-element-19d98080 > .elementor-widget-container{padding:10px 10px 10px 10px;border-style:solid;border-width:1px 1px 1px 1px;border-color:#E5E5E5;}.elementor-390 .elementor-element.elementor-element-787a8efa > .elementor-widget-container{padding:10px 10px 10px 10px;border-style:solid;border-width:1px 1px 1px 1px;border-color:#E5E5E5;}@media(max-width:1024px){ .elementor-390 .elementor-element.elementor-element-96c22e1{--grid-side-margin:10px;--grid-column-gap:10px;--grid-row-gap:10px;--grid-bottom-margin:10px;}}@media(max-width:767px){.elementor-390 .elementor-element.elementor-element-5c26846b{padding:10px 10px 10px 10px;} .elementor-390 .elementor-element.elementor-element-96c22e1{--grid-side-margin:10px;--grid-column-gap:10px;--grid-row-gap:10px;--grid-bottom-margin:10px;}}@media(min-width:768px){.elementor-390 .elementor-element.elementor-element-5c9cd72c{width:74.956%;}.elementor-390 .elementor-element.elementor-element-39ab870c{width:25%;}}/* Start custom CSS for post-comments, class: .elementor-element-384246e */.comments-title{
+       font-family: "IBM Plex Mono", Sans-serif;
+    font-size:1.5em;
+    font-weight: 600;
+}
+.comments-title span{
+    display:block;
+    font-size:0.8em!important;
+}
+
+.comment-list li{
+    list-style: none;
+    margin: 20px 0px;
+    padding:20px 0px;
+}
+
+.comment-author{
+     font-family: "IBM Plex Mono", Sans-serif;
+    font-size:0.9em;
+    font-weight: 600;
+}
+
+.comment-metadata a{
+    color: #949494;
+    font-family: IBM Plex Mono;
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: 5px 0;
+    letter-spacing: -1px
+}
+
+.comment-content{
+    color: #7E7E7E;
+    font-family: "Roboto Slab", Sans-serif;
+    font-weight: 400;
+}
+
+.comment-reply-link{
+     width: auto;
+        background-color: #000;
+    color: #FEED01;
+    padding: 5px 20px 5px 20px;
+    font-family: "IBM Plex Mono", Sans-serif;
+    font-size: 0.9em;
+    font-weight: 500;
+    border: 0px;
+}
+.comment-reply-link:hover{
+     background-color: #525252;
+     color: #FEED01;
+}
+#cancel-comment-reply-link{
+     width: auto;
+     background-color: #000;
+    color: #FEED01;
+    padding: 5px 10px 5px 10px;
+    font-family: "IBM Plex Mono", Sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    border: 0px;
+    margin-left: 20px;
+}
+
+#comentario{
+    margin-top:50px;
+}
+
+#respond{
+    margin-top:80px;
+    margin-bottom:100px;
+}
+
+
+#comentario #reply-title{
+        font-family: "IBM Plex Mono", Sans-serif;
+    font-size:1.5em;
+    font-weight: 600;
+}
+
+#comentario label{
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+     font-family: "IBM Plex Mono", Sans-serif;
+     font-weight: 600;
+     font-size: 0.9em;
+}
+#comentario textarea{
+    height: 80px;
+}
+#comentario textarea,
+#comentario input{
+     font-size: 0.9em;
+    display: inline-block;
+    width: 60%;
+    font-family: "IBM Plex Mono", Sans-serif;
+    font-weight: 500;
+        padding: 10px 10px 10px 10px;
+    border-radius: 0px 0px 0px 0px;
+        background-color: #FAFAFA;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #DEDEDE;
+}
+
+#comentario input[type=submit]{
+    width: auto;
+        background-color: #FEED01;
+    color: #000000;
+    padding: 10px 30px 10px 30px;
+    font-family: "IBM Plex Mono", Sans-serif;
+    font-size: 1em;
+    font-weight: 500;
+    border: 0px;
+}
+
+#comentario .comment-form-cookies-consent input{
+    width: 20px;
+}
+
+#comentario .comment-form-cookies-consent label{
+        width: 80%;
+}/* End custom CSS */
+/* Start custom CSS for wp-widget-recent-comments, class: .elementor-element-2105c28 */#comentarios{
+    margin-top: 20px;
+}
+#comentarios h5{
+        font-family: "IBM Plex Mono", Sans-serif;
+    font-size:2em;
+    font-weight: 600;
+}
+
+#comentarios ul li{
+    display: block;
+    list-style: none;
+       color: #000000;
+    font-family: "IBM Plex Mono", Sans-serif;
+    font-weight: 600;
+    margin: 15px 0px;
+}
+
+#comentarios ul li .comment-author-link{
+  
+}
+
+#comentarios ul li .comment-author-link a{
+    background: transparent;
+    color: #000;
+}
+
+#comentarios ul li a{
+     color: #FEED01;
+    background: #000; 
+    Padding: 5px;
+    font-size:0.9em;
+}/* End custom CSS */
